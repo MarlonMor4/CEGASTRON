@@ -1,0 +1,134 @@
+/* CSS para adaptar el carrusel y el texto */
+
+/* --- Estilos para la sección body --- */
+.body {
+    background-color: rgba(229, 229, 229, 1);
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+/* --- Estilos para el bloque de imágenes --- */
+.demo {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: -1px 9px 18px -5px rgba(17, 17, 17, 1);
+    overflow: hidden;
+    background-color: #000;
+    position: relative;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* --- Estilos para la descripción --- */
+.demo-description {
+    flex: 1 1 25%;
+    padding-right: 30px;
+    box-sizing: border-box;
+}
+
+.demo-description__title {
+    font-family: 'osefin Sans';
+    font-size: 2.5rem;
+    letter-spacing: 1.5px;
+    margin: 0 0 20px;
+}
+
+.demo-description__p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* --- Estilos para el carrusel de imágenes --- */
+.coursemeal {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.coursemeal__div {
+    flex: 1 1 30%;
+    position: relative;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.responsive-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.coursemeal-info {
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s;
+}
+
+.coursemeal-info__link:link,
+.coursemeal-info__link:visited {
+    font-family: 'Abril Fatface';
+    font-size: 1.5rem; /* Ajustamos el tamaño del texto */
+    color: #fff;
+    text-align: center;
+    letter-spacing: 1.8px;
+    margin: 0;
+    text-decoration: none;
+    transition: all 0.4s;
+}
+
+.coursemeal__div:hover .coursemeal-info {
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* --- Media Queries para hacer el diseño más adaptable --- */
+@media only screen and (max-width: 1200px) {
+    .demo-description {
+        padding: 0;
+        flex: 1 1 100%;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .demo-description {
+        margin-bottom: 30px;
+    }
+
+    .coursemeal {
+        flex-wrap: wrap;
+    }
+
+    .coursemeal__div {
+        flex: 1 1 100%;
+        height: 33.33333%;
+    }
+
+    .responsive-img img {
+        height: 100%;
+    }
+
+    .coursemeal-info {
+        height: 20%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .coursemeal-info__link {
+        font-size: 1.25rem; /* Ajustamos el tamaño del texto */
+    }
+}
